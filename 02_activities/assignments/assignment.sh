@@ -49,7 +49,7 @@ find data/raw/ -name "*ipaddr*" | xargs rm
 find data/processed/user_logs/ -name "*ipaddr*" | xargs rm 
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-ls -R data/processed/ | touch data/inventory.txt 
+find ./data/processed -type f > data/inventory.txt 
 
 ###########################################
 
